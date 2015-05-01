@@ -53,7 +53,7 @@ modes.
 The optional `options` argument of these functions must be a
 dictionary which can contain two keys: `'modes'` and `'name'`.
 
-The `modes` option, if provided, has to be a string containg only
+The `modes` option, if provided, has to be a string containing only
 letters `n`, `v`, `x`, `s`, `o`.  If it is omitted, it is assumed to be
 `'nvo'`.
 
@@ -79,7 +79,7 @@ NOTE: the reason for not allowing the hypothetical user to provide an
   would make part of a string fed to `execute` command), how and whether
   to escape special characters, how and whether to allow the user to
   supply extra options to `map` commands (such as `<special>`,
-  `<silent>`, etc.), as well as the apparent impossiblity to properly
+  `<silent>`, etc.), as well as the apparent impossibility to properly
   address the possibility of the user's using `<SID>` as a part of
   his/her/theirs keys sequence.
 
@@ -113,7 +113,7 @@ Suppose one wishes to use the key sequence `<leader>ekf` in *Normal*,
 *Visual*, and *Operator-pending* modes to perform the motion to the
 nearest "end of a keyword," as defined by the pattern `'\>'` in *Vim*, in
 the forward direction and taking into account the `[count]` prefix.
-Using this plugin, this can be acheved as follows, for example.
+Using this plugin, this can be achieved as follows, for example.
 
 1. Define a function `s:ToEndOfKeywordForward` with desired side effects
   that takes a positive integer argument `count1`:

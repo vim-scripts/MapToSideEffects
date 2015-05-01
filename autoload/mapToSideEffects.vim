@@ -1,11 +1,11 @@
 " autoload/mapToSideEffects.vim
 "
 " Plugin Name:  Map To Side Effects
-" Version:      0.1.0.pre
-" Last Change:  2015-04-30
+" Version:      0.1.0
+" Last Change:  2015-05-01
 " Author:       Alexey Muranov
 "
-" This plugin helps to fool *Vim* into mapping key sequences in Normal,
+" This plugin helps to fool Vim into mapping key sequences in Normal,
 " Visual/Select, and Operator-pending modes to function side effects.
 "
 "     ``All problems in computer science can be solved by another level
@@ -63,7 +63,7 @@
 " The optional `options` argument of these functions must be a
 " dictionary which can contain two keys: `'modes'` and `'name'`.
 "
-" The `modes` option, if provided, has to be a string containg only
+" The `modes` option, if provided, has to be a string containing only
 " letters `n`, `v`, `x`, `s`, `o`.  If it is omitted, it is assumed to be
 " `'nvo'`.
 "
@@ -89,7 +89,7 @@
 "   would make part of a string fed to `execute` command), how and whether
 "   to escape special characters, how and whether to allow the user to
 "   supply extra options to `map` commands (such as `<special>`,
-"   `<silent>`, etc.), as well as the apparent impossiblity to properly
+"   `<silent>`, etc.), as well as the apparent impossibility to properly
 "   address the possibility of the user's using `<SID>` as a part of
 "   his/her/theirs keys sequence.
 "
@@ -126,7 +126,7 @@
 " *Visual*, and *Operator-pending* modes to perform the motion to the
 " nearest "end of a keyword," as defined by the pattern `'\>'` in *Vim*, in
 " the forward direction and taking into account the `[count]` prefix.
-" Using this plugin, this can be acheved as follows, for example.
+" Using this plugin, this can be achieved as follows, for example.
 "
 " 1. Define a function `s:ToEndOfKeywordForward` with desired side effects
 "   that takes a positive integer argument `count1`:
@@ -421,7 +421,7 @@ endfunction
 " #.# Composing mapping commands
 " -------------------------------------------------------------------------
 "
-" The dictionary `s:mapToActionCommandMakers` containes nested dictionaries
+" The dictionary `s:mapToActionCommandMakers` contains nested dictionaries
 " that contain functions that generate commands for mapping key sequences
 " of the form `<Plug>(<name>)` to "side effects" of running the action
 " stored under the given numerical id.
@@ -472,7 +472,7 @@ function s:MakeMapToActionCommandMakers()
       let l:mapCommandMaker.map_mode_letter = l:mode
       " NOTE:  It is a coincidence that modes in this script are denoted
       "   by the same letters as used in "`map`" commands.  One could use
-      "   a dictionary lookup here instead of the direct assignement
+      "   a dictionary lookup here instead of the direct assignment
       "   `= l:mode`.
     endfor
   endfor

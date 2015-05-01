@@ -1,7 +1,7 @@
 This is a mirror of http://www.vim.org/scripts/script.php?script_id=5165
 
-This plugin helps to fool *Vim* into mapping key sequences in *Normal*,
-*Visual/Select*, and *Operator-pending* modes to function side effects.
+This plugin helps to fool Vim into mapping key sequences in Normal,
+Visual/Select, and Operator-pending modes to function side effects.
 
 ## User interface (API)
 
@@ -45,7 +45,7 @@ modes.
 The optional `options` argument of these functions must be a
 dictionary which can contain two keys: `'modes'` and `'name'`.
 
-The `modes` option, if provided, has to be a string containg only
+The `modes` option, if provided, has to be a string containing only
 letters `n`, `v`, `x`, `s`, `o`.  If it is omitted, it is assumed to be
 `'nvo'`.
 
@@ -63,17 +63,6 @@ Name collisions may be avoided as follows, for example:
 
 (b) do not provide custom names, use automatic names of the form
   "`MapToSideEffects-<id>`."
-
-NOTE: the reason for not allowing the hypothetical user to provide an
-  arbitrary key sequence to be mapped to the action's side effects is the
-  complexity, if not impossibility, of assuming the responsibility for
-  deciding how and whether to "sanitize" the provided key sequence (which
-  would make part of a string fed to `execute` command), how and whether
-  to escape special characters, how and whether to allow the user to
-  supply extra options to `map` commands (such as `<special>`,
-  `<silent>`, etc.), as well as the apparent impossiblity to properly
-  address the possibility of the user's using `<SID>` as a part of
-  his/her/theirs keys sequence.
 
 ### Unregistering actions and removing mappings
 
@@ -134,3 +123,5 @@ Using this plugin, this can be achieved as follows, for example.
       xmap <leader>ekf <Plug>(-GoToEndOfKeywordForward)
       omap <leader>ekf <Plug>(-GoToEndOfKeywordForward)
 
+
+GitHub page: https://github.com/alexeymuranov/vim-MapToSideEffects
